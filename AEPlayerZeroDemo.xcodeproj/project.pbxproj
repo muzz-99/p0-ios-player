@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ED1DC3460B7520570475E752 /* Pods_AEPlayerZeroDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1E99D27C9B506352604279 /* Pods_AEPlayerZeroDemo.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		46E5CF5E527BB44495F40FEF /* Pods-AEPlayerZeroDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEPlayerZeroDemo.debug.xcconfig"; path = "Target Support Files/Pods-AEPlayerZeroDemo/Pods-AEPlayerZeroDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1E99D27C9B506352604279 /* Pods_AEPlayerZeroDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEPlayerZeroDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC789983046E54F00B9E229 /* AEPlayerZeroDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPlayerZeroDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF900C62E55BD078CE0A6125 /* Pods-AEPlayerZeroDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEPlayerZeroDemo.release.xcconfig"; path = "Target Support Files/Pods-AEPlayerZeroDemo/Pods-AEPlayerZeroDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1DC3460B7520570475E752 /* Pods_AEPlayerZeroDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7942E6E103C43F974F950E2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46E5CF5E527BB44495F40FEF /* Pods-AEPlayerZeroDemo.debug.xcconfig */,
+				EF900C62E55BD078CE0A6125 /* Pods-AEPlayerZeroDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DDC7898F3046E54F00B9E229 = {
 			isa = PBXGroup;
 			children = (
 				DDC7899A3046E54F00B9E229 /* AEPlayerZeroDemo */,
 				DDC789993046E54F00B9E229 /* Products */,
+				7942E6E103C43F974F950E2B /* Pods */,
+				F278C7AE4F91ABA845FA6ECC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F278C7AE4F91ABA845FA6ECC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC1E99D27C9B506352604279 /* Pods_AEPlayerZeroDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDC789AB3046E55200B9E229 /* Build configuration list for PBXNativeTarget "AEPlayerZeroDemo" */;
 			buildPhases = (
+				7F20B2BEDC68F920AC289549 /* [CP] Check Pods Manifest.lock */,
 				DDC789943046E54F00B9E229 /* Sources */,
 				DDC789953046E54F00B9E229 /* Frameworks */,
 				DDC789963046E54F00B9E229 /* Resources */,
+				2228568280BDE4B148C0931A /* [CP] Embed Pods Frameworks */,
+				DD37109D304732D40076DBCA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				DDC7899A3046E54F00B9E229 /* AEPlayerZeroDemo */,
 			);
 			name = AEPlayerZeroDemo;
-			packageProductDependencies = (
-			);
 			productName = AEPlayerZeroDemo;
 			productReference = DDC789983046E54F00B9E229 /* AEPlayerZeroDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2228568280BDE4B148C0931A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AEPlayerZeroDemo/Pods-AEPlayerZeroDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AEPlayerZeroDemo/Pods-AEPlayerZeroDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AEPlayerZeroDemo/Pods-AEPlayerZeroDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F20B2BEDC68F920AC289549 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AEPlayerZeroDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD37109D304732D40076DBCA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDC789943046E54F00B9E229 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +231,7 @@
 /* Begin XCBuildConfiguration section */
 		DDC789AC3046E55200B9E229 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46E5CF5E527BB44495F40FEF /* Pods-AEPlayerZeroDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -172,6 +264,7 @@
 		};
 		DDC789AD3046E55200B9E229 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF900C62E55BD078CE0A6125 /* Pods-AEPlayerZeroDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -236,11 +329,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = XK28KWX2M3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,7 +397,7 @@
 				DEVELOPMENT_TEAM = XK28KWX2M3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
