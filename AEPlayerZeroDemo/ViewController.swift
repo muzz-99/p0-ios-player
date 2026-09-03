@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class ViewController: UIViewController {
 
@@ -64,7 +65,11 @@ class ViewController: UIViewController {
 
     private nonisolated static func crashForceUnwrap() {
         let value: Int? = nil
-        _ = value!
+        guard let unwrappedValue = value else {
+            Crashlytics.crashlytics().log("crashForceUnwrap: optional value was nil; skipped force unwrap")
+            return
+        }
+        _ = unwrappedValue
     }
 
     private nonisolated static func crashArrayOutOfBounds() {
