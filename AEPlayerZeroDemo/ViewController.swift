@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class ViewController: UIViewController {
 
@@ -86,6 +87,10 @@ class ViewController: UIViewController {
         // Route through an array so the compiler can't constant-fold the zero divisor.
         let zeroValues = [0]
         let denominator = zeroValues[0]
+        guard denominator != 0 else {
+            Crashlytics.crashlytics().log("crashDivideByZero: denominator was zero; skipped division")
+            return
+        }
         _ = numerator / denominator
     }
 }
