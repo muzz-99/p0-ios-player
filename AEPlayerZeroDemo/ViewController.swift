@@ -79,7 +79,13 @@ class ViewController: UIViewController {
     }
 
     private nonisolated static func crashFatalError() {
-        fatalError("Manual crash triggered from button tap")
+        let crashlytics = Crashlytics.crashlytics()
+        crashlytics.log("crashFatalError: manual crash request from button tap; skipped fatalError and recorded a non-fatal instead")
+        crashlytics.record(error: NSError(
+            domain: "AEPlayerZeroDemo.CrashLab",
+            code: 1,
+            userInfo: [NSLocalizedDescriptionKey: "Manual crash triggered from button tap"]
+        ))
     }
 
     private nonisolated static func crashForceCast() {
