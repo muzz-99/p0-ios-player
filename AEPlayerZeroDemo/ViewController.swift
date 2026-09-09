@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class ViewController: UIViewController {
 
@@ -69,7 +70,12 @@ class ViewController: UIViewController {
 
     private nonisolated static func crashArrayOutOfBounds() {
         let array = [1, 2, 3]
-        _ = array[10]
+        let index = 10
+        guard array.indices.contains(index) else {
+            Crashlytics.crashlytics().log("crashArrayOutOfBounds: index \(index) is outside 0..<\(array.count); skipped subscript")
+            return
+        }
+        _ = array[index]
     }
 
     private nonisolated static func crashFatalError() {
