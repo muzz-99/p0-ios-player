@@ -1,0 +1,10 @@
+# Replace these with real GitHub usernames/teams that have write access to this repo.
+# Format: <path-pattern> <owner-1> <owner-2> ...
+# PlayerZero's Remediate stage checks this file first when assigning a PR.
+
+AEPlayerZeroDemo/AEPlayerZeroDemo/ViewController.swift   @your-org/ios-team
+AEPlayerZeroDemo/AEPlayerZeroDemo/AppDelegate.swift      @your-org/ios-team
+AEPlayerZeroDemo/AEPlayerZeroDemo/SceneDelegate.swift    @your-org/ios-team
+
+# Fallback owner for anything not matched above
+*   @your-org/ios-team
