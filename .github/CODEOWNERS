@@ -2,9 +2,10 @@
 # Format: <path-pattern> <owner-1> <owner-2> ...
 # PlayerZero's Remediate stage checks this file first when assigning a PR.
 
-AEPlayerZeroDemo/AEPlayerZeroDemo/ViewController.swift   @your-org/ios-team
-AEPlayerZeroDemo/AEPlayerZeroDemo/AppDelegate.swift      @your-org/ios-team
-AEPlayerZeroDemo/AEPlayerZeroDemo/SceneDelegate.swift    @your-org/ios-team
+AEPlayerZeroDemo/AEPlayerZeroDemo/ViewController.swift   muzz.sait99@gmail.com
+AEPlayerZeroDemo/AEPlayerZeroDemo/AppDelegate.swift      muzz.sait99@gmail.com
+AEPlayerZeroDemo/AEPlayerZeroDemo/SceneDelegate.swift    muzz.sait99@gmail.com
 
+*   muzz.sait99@gmail.com
 # Fallback owner for anything not matched above
 *   @your-org/ios-team
